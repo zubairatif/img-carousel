@@ -1,0 +1,24 @@
+{
+  "name": "img-slider",
+  "version": "1.0.0",
+  "description": "A simple image slider with styles an js pre-applied. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zubairatif/img-slider.git"
+  },
+  "keywords": [
+    "slider",
+    "carousel",
+    "images slider"
+  ],
+  "author": "Zubair Atif",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zubairatif/img-slider/issues"
+  },
+  "homepage": "https://github.com/zubairatif/img-slider#readme"
+}

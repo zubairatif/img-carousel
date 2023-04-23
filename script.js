@@ -1,2 +1,2 @@
-import slider from "./slider.js";
+import slider from "./index";
 slider();
