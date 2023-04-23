@@ -1,2 +1,3 @@
-import slider from "./index";
-slider();
+import carousel from "./index";
+import "style.css";
+carousel();

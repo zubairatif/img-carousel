@@ -1,9 +1,9 @@
-const sliderContainer = document.querySelector(".imgSlider_container");
-const slides = sliderContainer.querySelector(".imgSlider_slides");
-const slideList = sliderContainer.querySelectorAll(".imgSlider_slides img");
-const prevBtn = sliderContainer.querySelector(".imgSlider_prev");
-const nextBtn = sliderContainer.querySelector(".imgSlider_next");
-const dots = sliderContainer.querySelectorAll(".imgSlider_dot");
+const carouselContainer = document.querySelector(".imgCarousel_container");
+const slides = carouselContainer.querySelector(".imgCarousel_slides");
+const slideList = carouselContainer.querySelectorAll(".imgCarousel_slides img");
+const prevBtn = carouselContainer.querySelector(".imgCarousel_prev");
+const nextBtn = carouselContainer.querySelector(".imgCarousel_next");
+const dots = carouselContainer.querySelectorAll(".imgCarousel_dot");
 
 let slideIndex = 0;
 
@@ -15,7 +15,7 @@ function showSlide(index) {
     index = 0;
   }
 
-  // Move the slider container to show the slide
+  // Move the carousel container to show the slide
   const offset = -index * 100;
   slides.style.transform = `translateX(${offset}%)`;
 
@@ -40,7 +40,7 @@ function nextSlide() {
 function jumpToSlide(index) {
   showSlide(index);
 }
-export default function slider() {
+export default function carousel() {
   showSlide(slideIndex);
   prevBtn.addEventListener("click", prevSlide);
   nextBtn.addEventListener("click", nextSlide);
@@ -56,12 +56,12 @@ export default function slider() {
     nextSlide();
   }, 5000);
 
-  // Pause the automatic slide show when the user interacts with the slider
-  sliderContainer.addEventListener("mouseenter", () => {
+  // Pause the automatic slide show when the user interacts with the carousel
+  carouselContainer.addEventListener("mouseenter", () => {
     clearInterval(intervalId);
   });
 
-  sliderContainer.addEventListener("mouseleave", () => {
+  carouselContainer.addEventListener("mouseleave", () => {
     intervalId = setInterval(() => {
       nextSlide();
     }, 5000);
